@@ -627,6 +627,28 @@
               <p>Logging In, creating sessions - coming soon</p>
               <p>Using services in current session - coming soon</p>
               <p>Visiting pages and using services in current session - coming soon</p>
+              <h3>TroubleShooting</h3>
+              <p>If you find assertions getting 500 errors but with no exception messages, it is good to go native to display these special errors</p>
+              <p><!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1
+2
+3
+4
+5
+6
+7
+8
+9</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #75715e">&lt;?php</span> 
+        <span style="color: #f8f8f2">$ajaxInvoicesController</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">$this</span><span style="color: #f92672">-&gt;</span><span style="color: #a6e22e">getControllerManager</span><span style="color: #f8f8f2">()</span><span style="color: #f92672">-&gt;</span><span style="color: #a6e22e">get</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">AjaxController</span><span style="color: #f92672">::</span><span style="color: #a6e22e">class</span><span style="color: #f8f8f2">);</span>
+
+        <span style="color: #f8f8f2">$request</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">$ajaxInvoicesController</span><span style="color: #f92672">-&gt;</span><span style="color: #a6e22e">getRequest</span><span style="color: #f8f8f2">();</span>
+        <span style="color: #f8f8f2">$postRequest</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">$request</span><span style="color: #f92672">-&gt;</span><span style="color: #a6e22e">setMethod</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">Request</span><span style="color: #f92672">::</span><span style="color: #a6e22e">METHOD_POST</span><span style="color: #f8f8f2">)</span><span style="color: #f92672">-&gt;</span><span style="color: #a6e22e">getPost</span><span style="color: #f8f8f2">();</span>
+        <span style="color: #f8f8f2">$postRequest</span><span style="color: #f92672">-&gt;</span><span style="color: #a6e22e">fromArray</span><span style="color: #f8f8f2">($post);</span>
+
+        <span style="color: #f8f8f2">$ajaxInvoicesController</span><span style="color: #f92672">-&gt;</span><span style="color: #a6e22e">sendInvoicePreviewAction</span><span style="color: #f8f8f2">();</span>
+<span style="color: #75715e">?&gt;</span>
+</pre></td></tr></table></div>
+</p>
+              
               <h3>FAQ</h3>
               <p>Why are my methods not being tested? You have to add a suffix Test in order for it to be included in running the tests.</p>
               <p>Is “setup” class the same as construct? Kind of the only difference is “setup” is run for every test method.</p>
